@@ -10,8 +10,10 @@ public class Term {
         this.power = power;
     }
 
-    public Term(boolean isConstant) {
+    public Term(int coefficient, boolean isConstant) {
+        this.coefficient = coefficient;
         this.isConstant = isConstant;
+        this.power = 1;
     }
 
     public Term(String term) {
@@ -26,6 +28,7 @@ public class Term {
             this.coefficient = Integer.parseInt(term);
             this.power = 1;
         }
+        this.isConstant = false;
     }
 
     public int getCoefficient() {
